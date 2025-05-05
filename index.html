@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password - Word Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Password</h1>
+        <div class="game-board">
+            <div class="dashboard">
+                <div class="score-box">
+                    <span>Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="timer-box">
+                    <span>Time:</span>
+                    <span id="timer">90</span>
+                </div>
+                <div class="round-box">
+                    <span>Round:</span>
+                    <span id="round">1</span>
+                </div>
+            </div>
+            
+            <div id="game-area">
+                <div id="start-section">
+                    <h2>How to Play</h2>
+                    <p>Try to guess as many words as possible within 90 seconds.</p>
+                    <ol>
+                        <li>You'll see a secret password word</li>
+                        <li>Come up with one-word clues to help guess this word</li>
+                        <li>When ready, click "Guessed It!" to move to the next word</li>
+                        <li>If stuck, click "Skip" to move to a new word (costs 2 points)</li>
+                    </ol>
+                    <p>Each correct guess is worth 5 points!</p>
+                    <button id="start-game">Start Game</button>
+                </div>
+                
+                <div id="game-section" class="hidden">
+                    <div class="word-display">
+                        <span id="password-label">Password:</span>
+                        <span id="password-word">———</span>
+                    </div>
+                    
+                    <div class="actions">
+                        <button id="guessed-btn">Guessed It! (+5 pts)</button>
+                        <button id="skip-btn">Skip (-2 pts)</button>
+                    </div>
+                </div>
+                
+                <div id="end-section" class="hidden">
+                    <h2>Game Over!</h2>
+                    <p>Your final score: <span id="final-score">0</span></p>
+                    <p>Words guessed correctly: <span id="words-guessed">0</span></p>
+                    <button id="play-again">Play Again</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="difficulty-settings">
+            <h3>Difficulty</h3>
+            <div class="difficulty-options">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with ❤️ | GitHub Pages Deployment</p>
+    </footer>
+    
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

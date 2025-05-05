@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #3273dc;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.game-board {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+}
+
+.score-box, .timer-box, .round-box {
+    background-color: #3273dc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+}
+
+#game-area {
+    padding: 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.word-display {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+#password-label {
+    display: block;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#password-word {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3273dc;
+    letter-spacing: 0.1em;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #3273dc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2366c1;
+}
+
+#skip-btn {
+    background-color: #ff3860;
+}
+
+#skip-btn:hover {
+    background-color: #e02f53;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#start-section, #end-section {
+    text-align: center;
+}
+
+ol {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 450px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+.difficulty-settings {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.difficulty-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.difficulty-btn {
+    background-color: #e8e8e8;
+    color: #333;
+}
+
+.difficulty-btn:hover, .difficulty-btn.active {
+    background-color: #3273dc;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    padding: 10px;
+}
+
+/* Animation for word changes */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-word {
+    animation: fade-in 0.5s ease-out;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .dashboard {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .score-box, .timer-box, .round-box {
+        width: 100%;
+    }
+    
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    .difficulty-options {
+        flex-direction: column;
+    }
+}
